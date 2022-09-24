@@ -1,0 +1,68 @@
+
+body {
+  margin: 0;
+  background-color: white;
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+  height: 100vh;
+}
+
+
+.scheme-container {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+}
+
+.scheme {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* модальное окно и iframe */
+.modal-window {
+  position: fixed;
+  visibility: hidden;
+  margin: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 20;
+}
+
+.modal-window-opacity {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+
+iframe {
+  position: absolute;
+  top: calc(50% - (50%/2));
+  left: calc(50% - (50%/2));
+  z-index: 50;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}
